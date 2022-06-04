@@ -1,0 +1,20 @@
+<input type="text" id="title" [(ngModel)]="title"/>
+<button (click)="search(title)">Buscar</button>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productos">
+            <td><span>{{product.id}}</span></td>
+            <td><span>{{product.title}}</span></td>
+            <td><span>{{product.price}}</span></td>
+        </tr>
+    </tbody>
+</table>
